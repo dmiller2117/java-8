@@ -1,0 +1,6 @@
+# Default ignored files
+/shelf/
+/vcs.xml
+.idea/
+*.iml
+out
