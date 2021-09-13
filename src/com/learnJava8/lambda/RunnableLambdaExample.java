@@ -1,9 +1,10 @@
 package com.learnJava8.lambda;
 
 public class RunnableLambdaExample {
+    @SuppressWarnings({"Convert2Lambda", "CodeBlock2Expr"})
     public static void main(String[] args) {
 
-        /**
+        /*
          * prior Java 8
          */
         Runnable runnable = new Runnable() {
