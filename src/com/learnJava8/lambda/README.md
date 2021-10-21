@@ -42,3 +42,29 @@ And their extensions:
 - `Consumer` -> `BiConsumer`
 - `Predicate` -> `BiPredicate`
 - `Function` -> `BiFunction, UnaryOperator, BinaryOperator`
+
+## Lambdas and local variables
+
+What is a local variable:
+- Any variable that is declared inside a method body is called a local variable.
+
+Lambdas have some restrictions on using local variables.
+- Not allowed to use the same name as the **lambda parameter** or inside the **lambda body**
+- Not allowed **re-assign** a value to a local variable
+
+No restrictions on **instance** variables
+
+### Effectively final
+
+- Lambda's are allowed to use local variables but not allowed to modify it, even though it was not declared final.
+  - This is called **effectively final**
+- Not allowed to modify the value in the lambda.
+
+    
+    int value = 4;
+    Consumer <Integer> c1 = (a) -> {
+        // value = 6;  // reassinging not allowed
+        // System.out.println(i+value);
+    };
+    
+- Prior to Java 8, any variable that's used inside the anonymous class should be declared final.
