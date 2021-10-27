@@ -18,3 +18,17 @@ of **I/O** resource.
 
 
     names.parallelStream(); // creates a parallel stream
+    
+## How Stream API Works?
+
+Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operation
+
+## Collections and Streams
+
+|**Collections**|**Streams**|
+|---------------|-----------|
+|Can add or modify elements at any point of time.<br>For example:<br>```List -> list.add(<element>);```|Cannot add or modify elements in the stream.  It is a fixed data set.|
+|Elements in the collection can be accessed in any order. Use appropriate methods based on the collection.<br>For example:<br>```List -> list.get(0)```|Elements in the stream can be accessed only in sequence.|
+|Collections are eagerly constructed.|Streams are lazily constructed.|
+|Collections can be traversed 'n' number of times.|Streams can be traversed only once|
+|Performs **External iteration** to iterate through the elements.|Performs **Internal iteration** to iterate through the elements|

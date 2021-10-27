@@ -19,10 +19,19 @@ public class StreamsExample {
         Predicate<Student> studentPredicate = (student -> student.getGradeLevel() >= 3);
         Predicate<Student> studentGpaPredicate = (student -> student.getGpa() >= 3.9);
 
-        Map<String, List<String>> studentMap = StudentDataBase.getAllStudents().stream()  // can use a parallelStream if needed
-                .filter(studentPredicate)
-                .filter(studentGpaPredicate)
-                .collect(Collectors.toMap(Student::getName, Student::getActivities));
+        Map<String, List<String>> studentMap = StudentDataBase.getAllStudents().stream()  // initial output
+                .peek((student -> {  // use peek as debug
+                    System.out.println(student);
+                }))
+                .filter(studentPredicate)   // intermediate operation
+                .peek((student -> {  // use peek as debug
+                    System.out.println("After 1st filter" + student);
+                }))
+                .filter(studentGpaPredicate)    // intermediate operation
+                .peek((student -> {  // use peek as debug
+                    System.out.println("After 2nd filter" + student);
+                }))
+                .collect(Collectors.toMap(Student::getName, Student::getActivities));   // terminal operation
 
         System.out.println(studentMap);
     }
