@@ -32,3 +32,8 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 |Collections are eagerly constructed.|Streams are lazily constructed.|
 |Collections can be traversed 'n' number of times.|Streams can be traversed only once|
 |Performs **External iteration** to iterate through the elements.|Performs **Internal iteration** to iterate through the elements|
+
+## Stream API: ```map()```
+
+- ```map()``` : Convert(transform) from one type to another.
+- do not get confused with the ```Map``` collection type.
