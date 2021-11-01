@@ -37,3 +37,15 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 
 - ```map()``` : Convert(transform) from one type to another.
 - do not get confused with the ```Map``` collection type.
+
+@See StreamsMapExample.java
+
+## Stream API: ```flatMap()```
+
+- ```flatMap()```: converts (transforms) one type to another as like ```map()``` method
+- Used in the context of Stream where each element in the stream represents multiple elements.
+- 
+**Example:**
+- Each Stream element represents multiple elements.
+  - ```Stream<List>```
+  - ```Stream<Arrays>```
