@@ -49,3 +49,9 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 - Each Stream element represents multiple elements.
   - ```Stream<List>```
   - ```Stream<Arrays>```
+
+## Stream API: ```distinct(), count() and sorted()```
+
+- ```distinct()``` - returns a stream with unique elements
+- ```count()``` - returns a long with the total no of elements in the stream
+- ```sorted()``` - sorts the elements in the stream (using natural ordering)
