@@ -55,3 +55,10 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 - ```distinct()``` - returns a stream with unique elements
 - ```count()``` - returns a long with the total no of elements in the stream
 - ```sorted()``` - sorts the elements in the stream (using natural ordering)
+
+## Stream API - ```reduce()```
+
+- **reduce** - this is a terminal operation. Used to reduce the contents of a stream to a single value.
+- it takes two parameters as inputs:
+  - **first parameter** - default ot initial value
+  - **second parameter** - ```BinaryOperator<T>```
