@@ -13,10 +13,22 @@ public class StreamsMinMaxExample {
                 .reduce(0, (x, y) -> x > y ? x : y);
     }
 
+    public static int findMinValue(List<Integer> integerList) {
+        return integerList
+                .stream()
+                .reduce(0, (x, y) -> x < y ? x : y);  // returns 0 as default is set
+    }
+
     public static Optional<Integer> findMaxValueOptional(List<Integer> integerList) {
         return integerList
                 .stream()
                 .reduce((x, y) -> x > y ? x : y);
+    }
+
+    public static Optional<Integer> findMinValueOptional(List<Integer> integerList) {
+        return integerList
+                .stream()
+                .reduce((x, y) -> x < y ? x : y);
     }
 
     public static void main(String[] args) {
@@ -27,9 +39,17 @@ public class StreamsMinMaxExample {
         System.out.println(findMaxValue(integerList));
 
         Optional<Integer> maxValueOptional = findMaxValueOptional(emptyArrayList);
-
         if (maxValueOptional.isPresent()) {
             System.out.println(maxValueOptional.get());
+        } else {
+            System.out.println("no max value");
+        }
+
+        System.out.println(findMinValue(integerList));
+
+        Optional<Integer> minValueOptional = findMinValueOptional(integerList);
+        if (minValueOptional.isPresent()) {
+            System.out.println(minValueOptional.get());
         } else {
             System.out.println("no max value");
         }
