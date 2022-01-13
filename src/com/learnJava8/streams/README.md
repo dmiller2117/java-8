@@ -62,3 +62,10 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 - it takes two parameters as inputs:
   - **first parameter** - default ot initial value
   - **second parameter** - ```BinaryOperator<T>```
+
+## Stream API - ```limit()``` and ```skip()```
+
+- These two functions help to create a sub-stream.
+
+- ```limit(n)``` - limits the 'n' numbers of elements to be processed in the stream.
+- ```skip(n)``` - skips the 'n' numbers of elements from the stream
