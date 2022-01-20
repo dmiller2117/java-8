@@ -28,7 +28,6 @@ public class StreamsLimitSkipExample {
             System.out.println("No input returned");
         }
 
-
         Optional<Integer> skipResult = skip(integerList);
         if (skipResult.isPresent()) {
             System.out.println(skipResult.get());

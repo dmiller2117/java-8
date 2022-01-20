@@ -69,3 +69,10 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 
 - ```limit(n)``` - limits the 'n' numbers of elements to be processed in the stream.
 - ```skip(n)``` - skips the 'n' numbers of elements from the stream
+
+## Stream API - ```anyMatch(), allMatch(), noneMatch```
+
+- All these functions takes in a **predicate** as an input and returns a **Boolean** as an output
+- ```anyMatch()``` - returns **true** if any one of the element matches the predicate, otherwise false.
+- ```allMatch()``` - returns **true** if all the elements matches the predicate, otherwise false.
+- ```noneMatch()``` - returns **true** if none the element matches the predicate, otherwise false.
