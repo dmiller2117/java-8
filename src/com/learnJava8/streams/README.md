@@ -76,3 +76,12 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 - ```anyMatch()``` - returns **true** if any one of the element matches the predicate, otherwise false.
 - ```allMatch()``` - returns **true** if all the elements matches the predicate, otherwise false.
 - ```noneMatch()``` - returns **true** if none the element matches the predicate, otherwise false.
+
+## Stream API - ```findFirst() ``` and ```findAny()```
+
+- Used to find an element in a stream
+- Both the functions return ```Optional```
+- ```findFirst()``` returns first element in the stream
+- ```findAny()``` returns the first encountered element in the stream
+
+Returns same results, but is affected when using in parallel
