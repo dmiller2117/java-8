@@ -108,11 +108,3 @@ Example: ```Stream<String> stringStream = Stream.of("adam", "dan", "julie");```
 Example: ```Stream.iterate(1, x -> x*2);```
 
 Example: ```Stream.generate(<Supplier>);```
-
-## Numeric Streams
-
-Represents the **primitive values** in the stream
-
-- IntStream
-- LongStream
-- DoubleStream
