@@ -25,13 +25,13 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 
 ## Collections and Streams
 
-|**Collections**|**Streams**|
-|---------------|-----------|
-|Can add or modify elements at any point of time.<br>For example:<br>```List -> list.add(<element>);```|Cannot add or modify elements in the stream.  It is a fixed data set.|
-|Elements in the collection can be accessed in any order. Use appropriate methods based on the collection.<br>For example:<br>```List -> list.get(0)```|Elements in the stream can be accessed only in sequence.|
-|Collections are eagerly constructed.|Streams are lazily constructed.|
-|Collections can be traversed 'n' number of times.|Streams can be traversed only once|
-|Performs **External iteration** to iterate through the elements.|Performs **Internal iteration** to iterate through the elements|
+| **Collections**                                                                                                                                        | **Streams**                                                           |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
+| Can add or modify elements at any point of time.<br>For example:<br>```List -> list.add(<element>);```                                                 | Cannot add or modify elements in the stream.  It is a fixed data set. |
+| Elements in the collection can be accessed in any order. Use appropriate methods based on the collection.<br>For example:<br>```List -> list.get(0)``` | Elements in the stream can be accessed only in sequence.              |
+| Collections are eagerly constructed.                                                                                                                   | Streams are lazily constructed.                                       |
+| Collections can be traversed 'n' number of times.                                                                                                      | Streams can be traversed only once                                    |
+| Performs **External iteration** to iterate through the elements.                                                                                       | Performs **Internal iteration** to iterate through the elements       |
 
 ## Stream API: ```map()```
 
@@ -85,3 +85,26 @@ Stream Pipeline contains: Output -> Intermediate Operations -> Terminal Operatio
 - ```findAny()``` returns the first encountered element in the stream
 
 Returns same results, but is affected when using in parallel
+
+## Stream API - Short Circuiting
+
+Like the operator ```&&``` and ```||``` in Java, we can apply the same in Streams, where we do not need to evaluate the whole 
+stream/ statement
+
+This applies to the following in the streams api:
+```limit() findFirst(), findAny(), anyMatch(), allMatch(), noneMatch()```
+
+## Stream API - Factory methods
+
+- ```of(), iterate() and generate()```
+
+- ```of()``` creates a stream of certain values passed to this method.
+
+  
+Example: ```Stream<String> stringStream = Stream.of("adam", "dan", "julie");```
+
+```iterate(), generate()``` -> used to create infinite Streams
+
+Example: ```Stream.iterate(1, x -> x*2);```
+
+Example: ```Stream.generate(<Supplier>);```
