@@ -23,3 +23,9 @@ Represents the **primitive values** in the stream
 - ```DoubleStream```
   - does not support ```range()``` and ```rangeClosed()```, see example ```NumericStreamRangesExample``` for work 
   around.
+
+## Numeric Streams Aggregate functions:
+- ```sum()```
+- ```max()```
+- ```min()```
+- ```average()```
