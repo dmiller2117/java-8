@@ -39,3 +39,7 @@ Represents the **primitive values** in the stream
 **UnBoxing():**
 - Converting a Wrapper class type to a primitive type
   - Converting an Integer(wrapper) to int(primitive)
+
+## Numeric Streams : ```mapToObj(), mapToLong(), mapToDouble()```
+- ```mapToObj()``` -> convert each element in a numeric stream to an ```Object```
+- ```mapToLong``` ->
