@@ -29,3 +29,13 @@ Represents the **primitive values** in the stream
 - ```max()```
 - ```min()```
 - ```average()```
+
+## Numeric Streams : Boxing() and UnBoxing()
+
+**Boxing():**
+- Converting a primitive type to Wrapper class type
+  - Converting an int(primitive) to Integer(wrapper)
+
+**UnBoxing():**
+- Converting a Wrapper class type to a primitive type
+  - Converting an Integer(wrapper) to int(primitive)
